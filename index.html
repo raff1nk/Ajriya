@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Sections Website with Login & Backsound</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div class="login-container active" id="login-section">
+      <div class="box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <p id="error-message" style="color: red"></p>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-container" id="main-content" style="display: none">
+      <!-- Backsound Music -->
+      <audio id="backsound" autoplay loop>
+        <source src="Lifeline.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="music-title">Lifeline</div>
+
+      <div class="container">
+        <!-- Section 1 -->
+        <div class="section active" id="section1">
+          <div class="box">
+            <h2>Judul Bagian 1</h2>
+            <p>Pesan di bagian 1</p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 1)">Sebelumnya</button>
+            <button onclick="navigate('next', 1)">Selanjutnya</button>
+          </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="section" id="section2">
+          <div class="box">
+            <h2>Judul Bagian 2</h2>
+            <p>Pesan di bagian 2</p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 2)">Sebelumnya</button>
+            <button onclick="navigate('next', 2)">Selanjutnya</button>
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <div class="section" id="section3">
+          <div class="box">
+            <h2>Judul Bagian 3</h2>
+            <p>Pesan di bagian 3</p>
+          </div>
+          <div class="buttons">
+            <button onclick="navigate('prev', 3)">Sebelumnya</button>
+            <button onclick="navigate('next', 3)">Selanjutnya</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

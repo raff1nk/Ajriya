@@ -1,0 +1,116 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4; /* Default background color */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.container,
+.login-container,
+.main-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section,
+.login-container {
+  display: none;
+  min-height: 100vh; /* Mengisi tinggi layar penuh */
+  padding: 20px;
+  background: none;
+}
+
+.section.active,
+.login-container.active {
+  display: block;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 1); /* Solid white color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  max-width: 120px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px; /* Reduced font size */
+  color: #007bff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.music-title {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-container.active {
+  background: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .container,
+  .login-container,
+  .main-container {
+    padding: 10px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
